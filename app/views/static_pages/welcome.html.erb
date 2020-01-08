@@ -4,10 +4,6 @@
     <div class="container">
       <h1>Let's be better to Animals!</h1>
       <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-      <p>
-        <a href="#" class="btn btn-primary my-2">Main call to action</a>
-        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-      </p>
     </div>
   </section>
 
@@ -15,34 +11,37 @@
     <div class="container">
 
       <div class="card-deck">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
+
+        <div class="card d-flex flex-column">
+          <%= image_tag("pigs.jpg", class: "card-img-top") %>
           <div class="card-body">
             <h5 class="card-title">Animal Ethics</h5>
             <p class="card-text">Get to know the most important arguments in Animal Ethics and learn basic concepts and ideas.</p>
-
-            <hr />
-            <p>
-              Why study Animal Ethics or Ethics in General?
-            </p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
+          <a href="#" class="btn btn-lg btn-success mt-auto m-3">Get Started</a>
         </div>
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
+
+        <div class="card d-flex flex-column">
+          <%= image_tag("outreach-cube.jpg", class: "card-img-top") %>
           <div class="card-body">
             <h5 class="card-title">Resources for Activism</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <p class="card-text">
+              There are different forms of activism available.
+              Find out what you can do for the animals!
+            </p>
           </div>
+          <%= link_to "Read More", activism_path, class: "btn btn-lg btn-success mt-auto m-3" %>
         </div>
-        <div class="card">
-          <%= image_tag("vegan.png", class: "card-img-top") %>
+        <div class="card d-flex flex-column">
+          <%= image_tag("govegan1.jpg", class: "card-img-top") %>
           <div class="card-body">
             <h5 class="card-title">Go Vegan</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <p class="card-text">
+              By buying milk, cheese, meat and eggs, you support a cruel and fucked up industry.
+              Don't be a part of it.
+            </p>
           </div>
+          <a href="#" class="btn btn-lg btn-success mt-auto m-3">Become Vegan</a>
         </div>
       </div>
     </div>
