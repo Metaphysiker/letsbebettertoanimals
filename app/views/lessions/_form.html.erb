@@ -1,0 +1,42 @@
+<%= form_with(model: lession, local: true) do |form| %>
+  <% if lession.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lession.errors.count, "error") %> prohibited this lession from being saved:</h2>
+
+      <ul>
+        <% lession.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :keywords %>
+    <%= form.text_field :keywords %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.rich_text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :search_field %>
+    <%= form.text_area :search_field %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
