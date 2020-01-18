@@ -1,29 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @lession.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @lession.description %>
-</p>
-
-<p>
-  <strong>Keywords:</strong>
-  <%= @lession.keywords %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @lession.content %>
-</p>
-
-<p>
-  <strong>Search field:</strong>
-  <%= @lession.search_field %>
-</p>
-
-<%= link_to 'Edit', edit_lession_path(@lession) %> |
-<%= link_to 'Back', lessions_path %>
+<div class="container my-2">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= @lession.title %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= @lession.description %></h6>
+      <p class="card-text">
+        Keywords: <%= @lession.keywords %>
+      </p>
+      <hr />
+      <p class="card-text">
+        <%= @lession.content %>
+      </p>
+    </div>
+  </div>
+</div>
